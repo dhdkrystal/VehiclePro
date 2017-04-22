@@ -4,26 +4,29 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.TextView;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.xmucar.vehiclepro.Fragment.MainFragment;
+import com.xmucar.vehiclepro.Fragment.PersonalFragment;
 import com.xmucar.vehiclepro.Fragment.StatusFragment;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView mTextMessage;
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
-
+    private MainFragment mainFragment;
+    private StatusFragment statusFragment;
+    private PersonalFragment personalFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mTextMessage = (TextView) findViewById(R.id.message);
         fragmentManager = getFragmentManager();
+        mainFragment = new MainFragment();
+        statusFragment = new StatusFragment();
+        personalFragment = new PersonalFragment();
         initBottomBar();
     }
 
@@ -39,20 +42,26 @@ public class MainActivity extends AppCompatActivity {
                 .setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_RIPPLE)
                 .setFirstSelectedPosition(0)
                 .initialise();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.fragment, mainFragment);
+        fragmentTransaction.commit();
         bottomNavigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
             @Override
             public void onTabSelected(int position) {
                 switch (position) {
                     case 0:
                         fragmentTransaction = fragmentManager.beginTransaction();
-                        MainFragment mainFragment = new MainFragment();
-                        fragmentTransaction.add(R.id.main_fragment, mainFragment);
+                        fragmentTransaction.replace(R.id.fragment, mainFragment);
                         fragmentTransaction.commit();
                         break;
                     case 1:
                         fragmentTransaction = fragmentManager.beginTransaction();
-                        StatusFragment statusFragment = new StatusFragment();
-                        fragmentTransaction.add(R.id.status_fragment, statusFragment);
+                        fragmentTransaction.replace(R.id.fragment, statusFragment);
+                        fragmentTransaction.commit();
+                        break;
+                    case 3:
+                        fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.fragment, personalFragment);
                         fragmentTransaction.commit();
                         break;
                 }
@@ -60,6 +69,19 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTabUnselected(int position) {
+//                switch (position) {
+//                    case 0:
+//                        fragmentTransaction = fragmentManager.beginTransaction();
+//                        fragmentTransaction.hide(mainFragment);
+//                        fragmentTransaction.commit();
+//                        break;
+//                    case 1:
+//
+//                        fragmentTransaction = fragmentManager.beginTransaction();
+//                        fragmentTransaction.hide(statusFragment);
+//                        fragmentTransaction.commit();
+//                        break;
+//                }
             }
 
             @Override
