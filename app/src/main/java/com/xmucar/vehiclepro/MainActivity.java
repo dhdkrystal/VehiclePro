@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.xmucar.vehiclepro.Fragment.MainFragment;
+import com.xmucar.vehiclepro.Fragment.MarketFragment;
 import com.xmucar.vehiclepro.Fragment.PersonalFragment;
 import com.xmucar.vehiclepro.Fragment.StatusFragment;
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private MainFragment mainFragment;
     private StatusFragment statusFragment;
     private PersonalFragment personalFragment;
+    private MarketFragment marketFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentManager = getFragmentManager();
         mainFragment = new MainFragment();
         statusFragment = new StatusFragment();
+        marketFragment = new MarketFragment();
         personalFragment = new PersonalFragment();
         initBottomBar();
     }
@@ -57,6 +60,11 @@ public class MainActivity extends AppCompatActivity {
                     case 1:
                         fragmentTransaction = fragmentManager.beginTransaction();
                         fragmentTransaction.replace(R.id.fragment, statusFragment);
+                        fragmentTransaction.commit();
+                        break;
+                    case 2:
+                        fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.fragment, marketFragment);
                         fragmentTransaction.commit();
                         break;
                     case 3:
