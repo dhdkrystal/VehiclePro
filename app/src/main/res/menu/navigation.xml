@@ -7,7 +7,7 @@
         android:title="@string/title_home" />
     <item
         android:id="@+id/navigation_status"
-        android:icon="@drawable/ic_time_to_leave_black_24dp"
+        android:icon="@drawable/ic_status_24dp"
         android:title="@string/title_status" />
     <item
         android:id="@+id/navigation_market"
