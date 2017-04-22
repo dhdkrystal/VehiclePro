@@ -7,6 +7,19 @@
     android:orientation="vertical"
     tools:context="com.xmucar.vehiclepro.MainActivity">
 
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.xmucar.vehiclepro.Fragment.MainFragment"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_weight="1" />
+
+    <fragment
+        android:id="@+id/status_fragment"
+        android:name="com.xmucar.vehiclepro.Fragment.StatusFragment"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_weight="1" />
     <FrameLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
@@ -25,13 +38,6 @@
 
     </FrameLayout>
 
-    <!--<android.support.design.widget.BottomNavigationView-->
-    <!--android:id="@+id/navigation"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="bottom"-->
-    <!--android:background="?android:attr/windowBackground"-->
-    <!--app:menu="@menu/navigation" />-->
     <com.ashokvarma.bottomnavigation.BottomNavigationBar
         android:id="@+id/bottom_navigation_bar"
         android:layout_width="wrap_content"

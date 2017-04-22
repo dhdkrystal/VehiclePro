@@ -1,15 +1,21 @@
 package com.xmucar.vehiclepro;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
+import com.xmucar.vehiclepro.Fragment.MainFragment;
+import com.xmucar.vehiclepro.Fragment.StatusFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
+    private FragmentManager fragmentManager;
+    private FragmentTransaction fragmentTransaction;
 
 
     @Override
@@ -17,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mTextMessage = (TextView) findViewById(R.id.message);
+        fragmentManager = getFragmentManager();
         initBottomBar();
     }
 
@@ -37,10 +44,17 @@ public class MainActivity extends AppCompatActivity {
             public void onTabSelected(int position) {
                 switch (position) {
                     case 0:
-                        mTextMessage.setText("主页");
+                        fragmentTransaction = fragmentManager.beginTransaction();
+                        MainFragment mainFragment = new MainFragment();
+                        fragmentTransaction.add(R.id.main_fragment, mainFragment);
+                        fragmentTransaction.commit();
                         break;
                     case 1:
-                        mTextMessage.setText("状态");
+                        fragmentTransaction = fragmentManager.beginTransaction();
+                        StatusFragment statusFragment = new StatusFragment();
+                        fragmentTransaction.add(R.id.status_fragment, statusFragment);
+                        fragmentTransaction.commit();
+                        break;
                 }
             }
 
