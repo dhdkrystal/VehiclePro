@@ -2,6 +2,7 @@ package com.xmucar.vehiclepro;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -25,12 +26,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /*设置导航栏和状态栏颜色*/
+        getWindow().setNavigationBarColor(Color.parseColor("#4d4d66"));
+        getWindow().setStatusBarColor(Color.parseColor("#4d4d66"));
+        initFragment();
+        initBottomBar();
+    }
+
+    private void initFragment() {
         fragmentManager = getFragmentManager();
         mainFragment = new MainFragment();
         statusFragment = new StatusFragment();
         marketFragment = new MarketFragment();
         personalFragment = new PersonalFragment();
-        initBottomBar();
     }
 
     private void initBottomBar() {
@@ -51,47 +59,59 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
             @Override
             public void onTabSelected(int position) {
+                fragmentTransaction = fragmentManager.beginTransaction();
                 switch (position) {
                     case 0:
-                        fragmentTransaction = fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.fragment, mainFragment);
-                        fragmentTransaction.commit();
+                        if (mainFragment.isAdded()) {
+                            fragmentTransaction.show(mainFragment);
+                        } else {
+                            fragmentTransaction.add(R.id.fragment, mainFragment);
+                        }
                         break;
                     case 1:
-                        fragmentTransaction = fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.fragment, statusFragment);
-                        fragmentTransaction.commit();
+                        if (statusFragment.isAdded()) {
+                            fragmentTransaction.show(statusFragment);
+                        } else {
+                            fragmentTransaction.add(R.id.fragment, statusFragment);
+                        }
                         break;
                     case 2:
-                        fragmentTransaction = fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.fragment, marketFragment);
-                        fragmentTransaction.commit();
+                        if (marketFragment.isAdded()) {
+                            fragmentTransaction.show(marketFragment);
+                        } else {
+                            fragmentTransaction.add(R.id.fragment, marketFragment);
+                        }
                         break;
                     case 3:
-                        fragmentTransaction = fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.fragment, personalFragment);
-                        fragmentTransaction.commit();
+                        if (personalFragment.isAdded()) {
+                            fragmentTransaction.show(personalFragment);
+                        } else {
+                            fragmentTransaction.add(R.id.fragment, personalFragment);
+                        }
                         break;
                 }
+                fragmentTransaction.commit();
             }
 
             @Override
             public void onTabUnselected(int position) {
-//                switch (position) {
-//                    case 0:
-//                        fragmentTransaction = fragmentManager.beginTransaction();
-//                        fragmentTransaction.hide(mainFragment);
-//                        fragmentTransaction.commit();
-//                        break;
-//                    case 1:
-//
-//                        fragmentTransaction = fragmentManager.beginTransaction();
-//                        fragmentTransaction.hide(statusFragment);
-//                        fragmentTransaction.commit();
-//                        break;
-//                }
+                fragmentTransaction = fragmentManager.beginTransaction();
+                switch (position) {
+                    case 0:
+                        fragmentTransaction.hide(mainFragment);
+                        break;
+                    case 1:
+                        fragmentTransaction.hide(statusFragment);
+                        break;
+                    case 2:
+                        fragmentTransaction.hide(marketFragment);
+                        break;
+                    case 3:
+                        fragmentTransaction.hide(personalFragment);
+                        break;
+                }
+                fragmentTransaction.commit();
             }
-
             @Override
             public void onTabReselected(int position) {
             }
