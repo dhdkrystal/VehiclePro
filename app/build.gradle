@@ -29,5 +29,6 @@ dependencies {
     compile 'com.android.support:design:25.3.1'
     compile 'com.roughike:bottom-bar:1.2.4'
     compile 'com.ashokvarma.android:bottom-navigation-bar:1.4.1'
+    compile 'me.yokeyword:fragmentation:0.10.3'
     testCompile 'junit:junit:4.12'
 }
