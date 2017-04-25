@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#3C3A4C"
+        android:gravity="center_vertical"
+        android:text="    常见问题"
+        android:textColor="@android:color/white"
+        android:textIsSelectable="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#4D4D66"
+            android:drawableRight="@drawable/ic_navigate_next_black_24dp"
+            android:gravity="center_vertical"
+            android:text="        屏幕划伤"
+            android:textColor="@android:color/white"
+            android:textIsSelectable="false" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="5px"
+            android:background="#3C3A4C" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#4D4D66"
+            android:drawableRight="@drawable/ic_navigate_next_black_24dp"
+            android:gravity="center_vertical"
+            android:text="        硬件故障"
+            android:textColor="@android:color/white"
+            android:textIsSelectable="false" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="5px"
+            android:background="#3C3A4C" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#4D4D66"
+            android:drawableRight="@drawable/ic_navigate_next_black_24dp"
+            android:gravity="center_vertical"
+            android:text="        软件故障"
+            android:textColor="@android:color/white"
+            android:textIsSelectable="false" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="5px"
+            android:background="#3C3A4C" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#4D4D66"
+            android:drawableRight="@drawable/ic_navigate_next_black_24dp"
+            android:gravity="center_vertical"
+            android:text="        联系客服"
+            android:textColor="@android:color/white"
+            android:textIsSelectable="false" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="5px"
+            android:background="#3C3A4C" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#4D4D66"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/white"
+            android:textIsSelectable="false" />
+    </LinearLayout>
+</LinearLayout>
