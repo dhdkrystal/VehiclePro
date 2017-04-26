@@ -5,4 +5,11 @@
     <string name="title_status">状态</string>
     <string name="title_market">市场</string>
     <string name="title_personal">我的</string>
+    <string name="account_pic_desc">用户头像</string>
+    <string name="user_id">用户ID</string>
+    <string name="total_mileage">总里程</string>
+    <string name="next_maintenance">距离下次保养</string>
+    <string name="warning">警告</string>
+    <string name="no_engine_oil">您的机油已临近下限，请及时补充。</string>
+
 </resources>

@@ -34,7 +34,7 @@ public class MainActivity extends SupportActivity {
         setContentView(R.layout.activity_main);
         /*设置导航栏和状态栏颜色*/
         getWindow().setNavigationBarColor(Color.parseColor("#4d4d66"));
-        getWindow().setStatusBarColor(Color.parseColor("#4d4d66"));
+        getWindow().setStatusBarColor(Color.parseColor("#3c3a4c"));
         //设置Fragment管理器
         if (savedInstanceState == null) {
             loadRootFragment(R.id.fragment, MainFragment.newInstance());
