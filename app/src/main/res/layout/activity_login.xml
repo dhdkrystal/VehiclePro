@@ -35,8 +35,8 @@
             android:hint="@string/prompt_password"
             android:imeActionId="@+id/login"
             android:inputType="textPassword"
+            android:maxLines="1"
             android:padding="4dip"
-            android:singleLine="true"
             android:textColorHint="#AAAAAA"
             android:textSize="15sp" />
 
