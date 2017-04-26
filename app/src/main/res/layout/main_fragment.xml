@@ -78,10 +78,11 @@
 
         <TextView
             android:id="@+id/separate_line"
-            android:layout_width="2dp"
+            android:layout_width="1dp"
             android:layout_height="60dp"
             android:layout_centerHorizontal="true"
-            android:background="@color/white" />
+            android:background="@color/white"
+            android:padding="10dp" />
 
 
         <TextView

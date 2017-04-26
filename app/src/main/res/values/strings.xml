@@ -11,5 +11,10 @@
     <string name="next_maintenance">距离下次保养</string>
     <string name="warning">警告</string>
     <string name="no_engine_oil">您的机油已临近下限，请及时补充。</string>
+    <string name="common_problems">常见问题</string>
+    <string name="screen_scratch">屏幕划伤</string>
+    <string name="hardware_problems">硬件故障</string>
+    <string name="software_problems">软件故障</string>
+    <string name="contact_service">联系客服</string>
 
 </resources>

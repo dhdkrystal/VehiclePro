@@ -3,88 +3,80 @@
     android:id="@+id/linearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4D4D66"
+    android:divider="@drawable/separate_line"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="#3C3A4C"
-        android:gravity="center_vertical"
-        android:text="    常见问题"
-        android:textColor="@android:color/white"
-        android:textIsSelectable="false" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
         <TextView
+            android:id="@+id/screen_scratch"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#4D4D66"
-            android:drawableRight="@drawable/ic_navigate_next_black_24dp"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_navigate_next_black_24dp"
             android:gravity="center_vertical"
-            android:text="        屏幕划伤"
+            android:padding="16dp"
+            android:paddingEnd="24dp"
+            android:paddingStart="24dp"
+            android:text="@string/screen_scratch"
             android:textColor="@android:color/white"
             android:textIsSelectable="false" />
 
-        <ImageView
+        <View
             android:layout_width="fill_parent"
-            android:layout_height="5px"
+            android:layout_height="1dp"
             android:background="#3C3A4C" />
 
         <TextView
+            android:id="@+id/hardware_problems"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#4D4D66"
-            android:drawableRight="@drawable/ic_navigate_next_black_24dp"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_navigate_next_black_24dp"
             android:gravity="center_vertical"
-            android:text="        硬件故障"
+            android:padding="16dp"
+            android:paddingEnd="24dp"
+            android:paddingStart="24dp"
+            android:text="@string/hardware_problems"
             android:textColor="@android:color/white"
             android:textIsSelectable="false" />
 
-        <ImageView
+        <View
             android:layout_width="fill_parent"
-            android:layout_height="5px"
+            android:layout_height="1dp"
             android:background="#3C3A4C" />
 
         <TextView
+            android:id="@+id/software_problems"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#4D4D66"
-            android:drawableRight="@drawable/ic_navigate_next_black_24dp"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_navigate_next_black_24dp"
             android:gravity="center_vertical"
-            android:text="        软件故障"
+            android:padding="16dp"
+            android:paddingEnd="24dp"
+            android:paddingStart="24dp"
+            android:text="@string/software_problems"
             android:textColor="@android:color/white"
             android:textIsSelectable="false" />
 
-        <ImageView
+        <View
             android:layout_width="fill_parent"
-            android:layout_height="5px"
+            android:layout_height="1dp"
             android:background="#3C3A4C" />
 
         <TextView
+            android:id="@+id/contact_service"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#4D4D66"
-            android:drawableRight="@drawable/ic_navigate_next_black_24dp"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_navigate_next_black_24dp"
             android:gravity="center_vertical"
-            android:text="        联系客服"
+            android:padding="16dp"
+            android:paddingEnd="24dp"
+            android:paddingStart="24dp"
+            android:text="@string/contact_service"
             android:textColor="@android:color/white"
             android:textIsSelectable="false" />
 
-        <ImageView
+        <View
             android:layout_width="fill_parent"
-            android:layout_height="5px"
+            android:layout_height="1dp"
             android:background="#3C3A4C" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#4D4D66"
-            android:gravity="center_vertical"
-            android:textColor="@android:color/white"
-            android:textIsSelectable="false" />
-    </LinearLayout>
 </LinearLayout>
