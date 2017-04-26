@@ -42,6 +42,7 @@
             android:padding="5dp"
             android:text="@string/user_id"
             android:textAlignment="center"
+            android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -59,6 +60,7 @@
             android:paddingStart="30dp"
             android:paddingTop="20dp"
             android:text="@string/total_mileage"
+            android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -78,9 +80,10 @@
 
         <TextView
             android:id="@+id/separate_line"
-            android:layout_width="1dp"
-            android:layout_height="60dp"
+            android:layout_width="2dp"
+            android:layout_height="36dp"
             android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
             android:background="@color/white"
             android:padding="10dp" />
 
@@ -95,6 +98,7 @@
             android:paddingStart="30dp"
             android:paddingTop="20dp"
             android:text="@string/next_maintenance"
+            android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -108,11 +112,16 @@
             android:paddingEnd="20dp"
             android:paddingStart="10dp"
             android:paddingTop="20dp"
+            android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold" />
 
     </RelativeLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/bg_gradient1" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -190,7 +199,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#f3708a"
+        android:background="@drawable/bg_gradient2"
         android:orientation="vertical">
 
         <TextView

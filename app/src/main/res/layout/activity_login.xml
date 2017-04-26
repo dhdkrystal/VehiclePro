@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4c4c66"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/email_login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <AutoCompleteTextView
+            android:id="@+id/email"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginTop="180dp"
+            android:background="@drawable/bg_edittext"
+            android:hint="@string/prompt_email"
+            android:padding="4dp"
+            android:textColorHint="#AAAAAA"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_edittext"
+            android:hint="@string/prompt_password"
+            android:imeActionId="@+id/login"
+            android:inputType="textPassword"
+            android:padding="4dip"
+            android:singleLine="true"
+            android:textColorHint="#AAAAAA"
+            android:textSize="15sp" />
+
+        <!--
+        <CheckBox
+              android:id="@+id/CB_password"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="48dp"
+              android:layout_marginRight="48dp"
+              android:text="@string/remember_password" />
+              -->
+
+        <Button
+            android:id="@+id/email_sign_in_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/bg_loginbutton"
+            android:text="@string/action_sign_in_short"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

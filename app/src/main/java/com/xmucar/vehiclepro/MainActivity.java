@@ -68,6 +68,7 @@ public class MainActivity extends SupportActivity {
                 .addItem(new BottomNavigationItem(R.drawable.ic_person_black_24dp, "我的"))
                 .setMode(BottomNavigationBar.MODE_FIXED)
                 .setActiveColor("#4d4d66")
+                //  .setInActiveColor("#5feeef")
                 .setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_RIPPLE)
                 .setFirstSelectedPosition(0)
                 .initialise();

@@ -3,79 +3,86 @@
     android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3d3b4d"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4d4d66"
+        android:baselineAligned="false"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#4D4D66"
+            android:layout_height="54dp"
             android:drawableRight="@drawable/ic_navigate_next_black_24dp"
             android:gravity="center_vertical"
-            android:text="        购买Vehicle Pro车机"
+            android:paddingEnd="24dp"
+            android:paddingStart="36dp"
+            android:text="购买Vehicle Pro车机"
             android:textColor="@android:color/white"
-            android:textIsSelectable="false" />
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="5px"
-            android:background="#3C3A4C" />
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#4D4D66"
-            android:drawableRight="@drawable/ic_navigate_next_black_24dp"
-            android:gravity="center_vertical"
-            android:text="        合作商家"
-            android:textColor="@android:color/white"
-            android:textIsSelectable="false" />
+            android:layout_height="1dp"
+            android:layout_marginStart="36dp"
+            android:background="#3d3b4d" />
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="5px"
-            android:background="#3C3A4C" />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="54dp"
             android:background="#4D4D66"
             android:drawableRight="@drawable/ic_navigate_next_black_24dp"
             android:gravity="center_vertical"
-            android:text="        UBI车险"
+            android:paddingEnd="24dp"
+            android:paddingStart="36dp"
+            android:text="合作商家"
             android:textColor="@android:color/white"
-            android:textIsSelectable="false" />
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="5px"
-            android:background="#3C3A4C" />
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="36dp"
+            android:background="#3d3b4d" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
             android:background="#4D4D66"
             android:drawableRight="@drawable/ic_navigate_next_black_24dp"
             android:gravity="center_vertical"
-            android:text="        周边油站"
+            android:paddingEnd="24dp"
+            android:paddingStart="36dp"
+            android:text="UBI车险"
             android:textColor="@android:color/white"
-            android:textIsSelectable="false" />
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="5px"
-            android:background="#3C3A4C" />
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="36dp"
+            android:background="#3d3b4d" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
             android:background="#4D4D66"
+            android:drawableRight="@drawable/ic_navigate_next_black_24dp"
             android:gravity="center_vertical"
+            android:paddingEnd="24dp"
+            android:paddingStart="36dp"
+            android:text="周边油站"
             android:textColor="@android:color/white"
-            android:textIsSelectable="false" />
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
+
+
     </LinearLayout>
 </LinearLayout>

@@ -3,79 +3,85 @@
     android:id="@+id/linearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4D4D66"
+    android:background="#3d3b4d"
     android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4D4D66"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/screen_scratch"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="54dp"
             android:drawableEnd="@drawable/ic_navigate_next_black_24dp"
             android:gravity="center_vertical"
-            android:padding="16dp"
+
             android:paddingEnd="24dp"
-            android:paddingStart="24dp"
+            android:paddingStart="36dp"
             android:text="@string/screen_scratch"
             android:textColor="@android:color/white"
-            android:textIsSelectable="false" />
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
 
-        <View
-            android:layout_width="fill_parent"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#3C3A4C" />
+            android:layout_marginStart="36dp"
+            android:background="#3d3b4d" />
 
         <TextView
             android:id="@+id/hardware_problems"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="54dp"
             android:drawableEnd="@drawable/ic_navigate_next_black_24dp"
             android:gravity="center_vertical"
-            android:padding="16dp"
             android:paddingEnd="24dp"
-            android:paddingStart="24dp"
+            android:paddingStart="36dp"
             android:text="@string/hardware_problems"
             android:textColor="@android:color/white"
-            android:textIsSelectable="false" />
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
 
-        <View
-            android:layout_width="fill_parent"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#3C3A4C" />
+            android:layout_marginStart="36dp"
+            android:background="#3d3b4d" />
 
         <TextView
             android:id="@+id/software_problems"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="54dp"
             android:drawableEnd="@drawable/ic_navigate_next_black_24dp"
             android:gravity="center_vertical"
-            android:padding="16dp"
             android:paddingEnd="24dp"
-            android:paddingStart="24dp"
+            android:paddingStart="36dp"
             android:text="@string/software_problems"
             android:textColor="@android:color/white"
-            android:textIsSelectable="false" />
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
 
-        <View
-            android:layout_width="fill_parent"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#3C3A4C" />
+            android:layout_marginStart="36dp"
+            android:background="#3d3b4d" />
 
         <TextView
             android:id="@+id/contact_service"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="54dp"
             android:drawableEnd="@drawable/ic_navigate_next_black_24dp"
             android:gravity="center_vertical"
-            android:padding="16dp"
             android:paddingEnd="24dp"
-            android:paddingStart="24dp"
+            android:paddingStart="36dp"
             android:text="@string/contact_service"
             android:textColor="@android:color/white"
-            android:textIsSelectable="false" />
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
 
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:background="#3C3A4C" />
-
+    </LinearLayout>
 </LinearLayout>
