@@ -67,9 +67,9 @@ public class MainActivity extends SupportActivity {
                 .addItem(new BottomNavigationItem(R.drawable.ic_dashboard_black_24dp, "市场"))
                 .addItem(new BottomNavigationItem(R.drawable.ic_person_black_24dp, "我的"))
                 .setMode(BottomNavigationBar.MODE_FIXED)
-                .setActiveColor("#4d4d66")
-                //  .setInActiveColor("#5feeef")
-                .setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_RIPPLE)
+                .setActiveColor("#5feeef")
+                .setBarBackgroundColor("#4c4c66")
+                .setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC)
                 .setFirstSelectedPosition(0)
                 .initialise();
         bottomNavigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
