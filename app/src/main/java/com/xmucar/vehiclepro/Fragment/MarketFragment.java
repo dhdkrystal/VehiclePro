@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TabHost;
+import android.widget.TabWidget;
 
 import com.xmucar.vehiclepro.R;
 
@@ -17,6 +18,7 @@ import me.yokeyword.fragmentation.SupportFragment;
 
 public class MarketFragment extends SupportFragment {
     private TabHost tabHost;//声明TabHost组件的对象
+    private TabWidget tabWidget;
     public static MarketFragment newInstance() {
         Bundle args = new Bundle();
         MarketFragment marketFragment = new MarketFragment();
@@ -43,6 +45,9 @@ public class MarketFragment extends SupportFragment {
         tabHost.addTab(tabHost.newTabSpec("tab02")
                 .setIndicator("市场")
                 .setContent(R.id.linearLayout2));//添加第二个标签页
+        tabWidget = tabHost.getTabWidget();
+//        TextView view1=(TextView)tabWidget.getChildAt(0).findViewById();
+//        view1.setTextSize(18);
         return view;
     }
 
