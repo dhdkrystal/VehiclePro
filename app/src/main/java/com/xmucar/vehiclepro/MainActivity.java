@@ -62,10 +62,10 @@ public class MainActivity extends SupportActivity {
     private void initBottomBar() {
         BottomNavigationBar bottomNavigationBar = (BottomNavigationBar) findViewById(R.id.bottom_navigation_bar);
         bottomNavigationBar
-                .addItem(new BottomNavigationItem(R.drawable.ic_home_black_24dp, "主页"))
-                .addItem(new BottomNavigationItem(R.drawable.ic_status_24dp, "状态"))
-                .addItem(new BottomNavigationItem(R.drawable.ic_dashboard_black_24dp, "市场"))
-                .addItem(new BottomNavigationItem(R.drawable.ic_person_black_24dp, "我的"))
+                .addItem(new BottomNavigationItem(R.drawable.home, "主页"))
+                .addItem(new BottomNavigationItem(R.drawable.status, "状态"))
+                .addItem(new BottomNavigationItem(R.drawable.market, "市场"))
+                .addItem(new BottomNavigationItem(R.drawable.personal, "我的"))
                 .setMode(BottomNavigationBar.MODE_FIXED)
                 .setActiveColor("#5feeef")
                 .setBarBackgroundColor("#4c4c66")
