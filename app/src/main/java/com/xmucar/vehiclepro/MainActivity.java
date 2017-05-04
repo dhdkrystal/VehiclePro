@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
+import com.xmucar.vehiclepro.Fragment.CarFragment;
 import com.xmucar.vehiclepro.Fragment.MainFragment;
 import com.xmucar.vehiclepro.Fragment.MarketFragment;
 import com.xmucar.vehiclepro.Fragment.PersonalFragment;
@@ -27,6 +28,7 @@ public class MainActivity extends SupportActivity {
     private StatusFragment statusFragment;
     private PersonalFragment personalFragment;
     private MarketFragment marketFragment;
+    private CarFragment carFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +66,7 @@ public class MainActivity extends SupportActivity {
         bottomNavigationBar
                 .addItem(new BottomNavigationItem(R.drawable.home, "主页"))
                 .addItem(new BottomNavigationItem(R.drawable.status, "状态"))
+                .addItem(new BottomNavigationItem(R.drawable.ic_directions_car_black_24dp, "用车"))
                 .addItem(new BottomNavigationItem(R.drawable.market, "市场"))
                 .addItem(new BottomNavigationItem(R.drawable.personal, "我的"))
                 .setMode(BottomNavigationBar.MODE_FIXED)
@@ -95,6 +98,20 @@ public class MainActivity extends SupportActivity {
                         }
                         break;
                     case 2:
+                        carFragment = findFragment(CarFragment.class);
+                        if (carFragment == null) {
+                            popTo(MainFragment.class, false, new Runnable() {
+                                @Override
+                                public void run() {
+                                    start(CarFragment.newInstance());
+                                }
+                            });
+                        } else {
+                            // 如果已经在栈内,则以SingleTask模式start
+                            start(carFragment, SupportFragment.SINGLETASK);
+                        }
+                        break;
+                    case 3:
                         marketFragment = findFragment(MarketFragment.class);
                         if (marketFragment == null) {
                             popTo(MainFragment.class, false, new Runnable() {
@@ -108,7 +125,7 @@ public class MainActivity extends SupportActivity {
                             start(marketFragment, SupportFragment.SINGLETASK);
                         }
                         break;
-                    case 3:
+                    case 4:
                         personalFragment = findFragment(PersonalFragment.class);
                         if (personalFragment == null) {
                             popTo(MainFragment.class, false, new Runnable() {

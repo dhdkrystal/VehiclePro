@@ -124,14 +124,14 @@
         android:background="@drawable/bg_gradient1" />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="42dp">
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="4dp"
-            android:src="@drawable/ic_placeholder_all_white_48dp"
+            android:src="@drawable/icon1"
             tools:ignore="contentDescription" />
 
         <ImageView
@@ -139,7 +139,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="4dp"
-            android:src="@drawable/ic_placeholder_all_white_48dp"
+            android:src="@drawable/icon2"
             tools:ignore="contentDescription" />
 
         <ImageView
@@ -147,7 +147,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="4dp"
-            android:src="@drawable/ic_placeholder_all_white_48dp"
+            android:src="@drawable/icon3"
             tools:ignore="contentDescription" />
 
         <ImageView
@@ -155,20 +155,28 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="4dp"
-            android:src="@drawable/ic_placeholder_all_white_48dp"
+            android:src="@drawable/icon4"
+            tools:ignore="contentDescription" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:src="@drawable/icon5"
             tools:ignore="contentDescription" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="42dp">
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="4dp"
-            android:src="@drawable/ic_placeholder_all_white_48dp"
+            android:src="@drawable/icon6"
             tools:ignore="contentDescription" />
 
         <ImageView
@@ -176,7 +184,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="4dp"
-            android:src="@drawable/ic_placeholder_all_white_48dp"
+            android:src="@drawable/icon7"
             tools:ignore="contentDescription" />
 
         <ImageView
@@ -184,7 +192,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="4dp"
-            android:src="@drawable/ic_placeholder_all_white_48dp"
+            android:src="@drawable/icon8"
             tools:ignore="contentDescription" />
 
         <ImageView
@@ -192,7 +200,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="4dp"
-            android:src="@drawable/ic_placeholder_all_white_48dp"
+            android:src="@drawable/icon9"
+            tools:ignore="contentDescription" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:src="@drawable/icon10"
             tools:ignore="contentDescription" />
     </LinearLayout>
 
